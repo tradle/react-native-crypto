@@ -1,6 +1,6 @@
 'use strict'
 
-exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('randombytes')
+exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('react-native-randombytes')
 exports.createHash = exports.Hash = require('create-hash')
 exports.createHmac = exports.Hmac = require('create-hmac')
 
