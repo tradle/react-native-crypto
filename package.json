@@ -1,18 +1,17 @@
 {
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (dominictarr.com)",
-  "name": "crypto-browserify",
-  "description": "implementation of crypto for the browser",
-  "version": "3.11.0",
-  "homepage": "https://github.com/crypto-browserify/crypto-browserify",
+  "name": "react-native-crypto",
+  "description": "implementation of crypto for React Native",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mvayngrib/react-native-crypto",
   "repository": {
     "type": "git",
-    "url": "git://github.com/crypto-browserify/crypto-browserify.git"
+    "url": "git://github.com/mvayngrib/react-native-crypto.git"
   },
   "scripts": {
     "standard": "standard",
     "test": "npm run standard && npm run unit",
-    "unit": "node test/",
-    "browser": "zuul --browser-version $BROWSER_VERSION --browser-name $BROWSER_NAME -- test/index.js"
+    "unit": "Echo 'tests not set up for React Native yet'"
   },
   "engines": {
     "node": "*"
@@ -39,8 +38,10 @@
     "zuul": "^3.6.0"
   },
   "optionalDependencies": {},
-  "browser": {
-    "crypto": false
-  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "ios"
+  ],
   "license": "MIT"
 }

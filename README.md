@@ -1,6 +1,11 @@
-# crypto-browserify
+# react-native-crypto
 
-A port of node's `crypto` module to the browser.
+Note: this module is a clone of [crypto-browserify](https://github.com/crypto-browserify/crypto-browserify), with randombytes replaced. When React Native begins to [support](https://github.com/facebook/react-native) the "react-native" keyword in package.json, this module may go away
+
+A port of node's `crypto` module to React Native.
+
+What follows is unedited text from crypto-browserify
+
 
 [![Build Status](https://travis-ci.org/crypto-browserify/crypto-browserify.svg?branch=master)](https://travis-ci.org/crypto-browserify/crypto-browserify)
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
