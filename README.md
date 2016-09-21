@@ -4,15 +4,33 @@ Note: this module is a clone of [crypto-browserify](https://github.com/crypto-br
 
 A port of node's `crypto` module to React Native.
 
+## install
+
+Because this module depends on some node core modules, and react-native doesn't currently have a [resolve.alias a la webpack](https://productpains.com/post/react-native/packager-support-resolvealias-ala-webpack), you will need to use [rn-nodeify](https://github.com/mvayngrib/rn-nodeify) for your shimming needs.
+
+A typical workflow:
+
+1. Install 
+  ```
+  npm i --save react-native-crypto
+  npm i --save-dev rn-nodeify
+  # install node core shims and recursively hack package.json files 
+  # in ./node_modules to add/update the "browser"/"react-native" field with relevant mappings
+  ./node_modules/.bin/rn-nodeify --hack --install
+  ```
+
+2. `rn-nodeify` will create a `shim.js` in the project root directory
+  ```js
+  // index.ios.js or index.android.js
+  require('./shim.js')
+  // ...the rest of your code
+  ```
+
+## the crypto in this box
+
 What follows is unedited text from crypto-browserify
 
-
-[![Build Status](https://travis-ci.org/crypto-browserify/crypto-browserify.svg?branch=master)](https://travis-ci.org/crypto-browserify/crypto-browserify)
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/crypto-browserify.svg)](https://saucelabs.com/u/crypto-browserify)
-
-The goal of this module is to reimplement node's crypto module,
-in pure javascript so that it can run in the browser.
+The goal of this module is to reimplement node's crypto module so that it can run in react-native supported environments.
 
 Here is the subset that is currently implemented:
 
