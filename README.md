@@ -10,11 +10,15 @@ Because this module depends on some node core modules, and react-native doesn't 
 
 A typical workflow:
 
-1. Install 
-  ```
+1. Install
+  ```sh
   npm i --save react-native-crypto
-  npm i --save-dev rn-nodeify
-  # install node core shims and recursively hack package.json files 
+  # install peer deps
+  npm i --save react-native-randombytes
+  react-native link react-native-randombytes
+  # install latest rn-nodeify
+  npm i --save-dev mvayngrib/rn-nodeify
+  # install node core shims and recursively hack package.json files
   # in ./node_modules to add/update the "browser"/"react-native" field with relevant mappings
   ./node_modules/.bin/rn-nodeify --hack --install
   ```
@@ -22,7 +26,8 @@ A typical workflow:
 2. `rn-nodeify` will create a `shim.js` in the project root directory
   ```js
   // index.ios.js or index.android.js
-  require('./shim.js')
+  // make sure you use `import` and not require!  
+  import './shim.js'
   // ...the rest of your code
   ```
 
@@ -53,6 +58,14 @@ Here is the subset that is currently implemented:
 these features from node's `crypto` are still unimplemented.
 
 * createCredentials
+
+these features would benefit from native implementations
+
+* pbkdf2
+* createSign
+* createVerify
+* createECDH
+* publicEncrypto/privateDecrypt (rsa)
 
 ## contributions
 
