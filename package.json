@@ -24,7 +24,7 @@
     "create-hmac": "^1.1.0",
     "diffie-hellman": "^5.0.0",
     "inherits": "^2.0.1",
-    "pbkdf2": "^3.0.3",
+    "pbkdf2": "3.0.8",
     "public-encrypt": "^4.0.0"
   },
   "peerDependencies": {
