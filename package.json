@@ -28,7 +28,7 @@
     "public-encrypt": "^4.0.0"
   },
   "peerDependencies": {
-    "react-native-randombytes": "^2.0.0"
+    "react-native-randombytes": ">=2.0.0 <4.0.0"
   },
   "devDependencies": {
     "hash-test-vectors": "~1.3.2",
