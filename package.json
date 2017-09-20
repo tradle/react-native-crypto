@@ -2,7 +2,7 @@
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (dominictarr.com)",
   "name": "react-native-crypto",
   "description": "implementation of crypto for React Native",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "homepage": "https://github.com/mvayngrib/react-native-crypto",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "browserify-cipher": "^1.0.0",
-    "browserify-sign": "^4.0.0",
+    "browserify-sign": "^4.0.4",
     "create-ecdh": "^4.0.0",
     "create-hash": "^1.1.0",
     "create-hmac": "^1.1.0",
