@@ -7,7 +7,8 @@ exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = r
 if (typeof window === 'object') {
   if (!window.crypto) window.crypto = {}
   if (!window.crypto.getRandomValues) {
-    window.crypto.getRandomValues = function (arr) {
+    window.crypto.getRandomValues = function getRandomValues (arr) {
+      let orig = arr
       if (arr.byteLength != arr.length) {
         // Get access to the underlying raw bytes
         arr = new Uint8Array(arr.buffer)
@@ -16,6 +17,8 @@ if (typeof window === 'object') {
       for (var i = 0; i < bytes.length; i++) {
         arr[i] = bytes[i]
       }
+
+      return orig
     }
   }
 }
