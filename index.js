@@ -3,23 +3,26 @@
 import { randomBytes } from 'react-native-randombytes'
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = randomBytes
 
-// implement window.getRandomValues(), for packages that rely on it
+// implement crypto.getRandomValues(), for packages that rely on it
+exports.getRandomValues = function getRandomValues (arr) {
+  let orig = arr
+  if (arr.byteLength != arr.length) {
+    // Get access to the underlying raw bytes
+    arr = new Uint8Array(arr.buffer)
+  }
+  const bytes = randomBytes(arr.length)
+  for (var i = 0; i < bytes.length; i++) {
+    arr[i] = bytes[i]
+  }
+
+  return orig
+}
+
+// Also implement window.crypto.getRandomValues(), if missing
 if (typeof window === 'object') {
   if (!window.crypto) window.crypto = {}
   if (!window.crypto.getRandomValues) {
-    window.crypto.getRandomValues = function getRandomValues (arr) {
-      let orig = arr
-      if (arr.byteLength != arr.length) {
-        // Get access to the underlying raw bytes
-        arr = new Uint8Array(arr.buffer)
-      }
-      const bytes = randomBytes(arr.length)
-      for (var i = 0; i < bytes.length; i++) {
-        arr[i] = bytes[i]
-      }
-
-      return orig
-    }
+    window.crypto.getRandomValues = exports.getRandomValues
   }
 }
 
