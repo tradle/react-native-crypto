@@ -6,7 +6,7 @@ A port of node's `crypto` module to React Native.
 
 ## install
 
-Because this module depends on some node core modules, and react-native doesn't currently have a [resolve.alias a la webpack](https://productpains.com/post/react-native/packager-support-resolvealias-ala-webpack), you will need to use [rn-nodeify](https://github.com/mvayngrib/rn-nodeify) for your shimming needs.
+Because this module depends on some node core modules, and react-native doesn't currently have a [resolve.alias a la webpack](https://productpains.com/post/react-native/packager-support-resolvealias-ala-webpack), you will need to use [rn-nodeify](https://github.com/tradle/rn-nodeify) for your shimming needs.
 
 A typical workflow:
 
@@ -17,7 +17,7 @@ A typical workflow:
   npm i --save react-native-randombytes
   react-native link react-native-randombytes
   # install latest rn-nodeify
-  npm i --save-dev mvayngrib/rn-nodeify
+  npm i --save-dev tradle/rn-nodeify
   # install node core shims and recursively hack package.json files
   # in ./node_modules to add/update the "browser"/"react-native" field with relevant mappings
   ./node_modules/.bin/rn-nodeify --hack --install
