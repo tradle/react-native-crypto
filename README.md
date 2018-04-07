@@ -8,7 +8,7 @@ A port of node's `crypto` module to React Native.
 
 Because this module depends on some node core modules, and react-native doesn't currently have a [resolve.alias a la webpack](https://productpains.com/post/react-native/packager-support-resolvealias-ala-webpack), you will need to use [rn-nodeify](https://github.com/tradle/rn-nodeify) for your shimming needs.
 
-A typical workflow:
+A suggested workflow:
 
 1. Install
   ```sh
@@ -28,6 +28,7 @@ A typical workflow:
   // index.ios.js or index.android.js
   // make sure you use `import` and not require!  
   import './shim.js'
+  import crypto from 'crypto'
   // ...the rest of your code
   ```
 
