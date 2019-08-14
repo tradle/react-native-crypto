@@ -85,6 +85,11 @@ var publicEncrypt = require('public-encrypt')
   exports[key] = publicEncrypt[key]
 })
 
+var rf = require('randomfill')
+
+exports.randomFill = rf.randomFill
+exports.randomFillSync = rf.randomFillSync
+
 // the least I can do is make error messages for the rest of the node.js/crypto api.
 ;[
   'createCredentials'
