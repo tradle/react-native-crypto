@@ -61,6 +61,7 @@ Here is the subset that is currently implemented:
 these features from node's `crypto` are still unimplemented.
 
 * createCredentials
+* scryptSync
 
 these features would benefit from native implementations
 
