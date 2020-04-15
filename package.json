@@ -3,10 +3,10 @@
   "name": "react-native-crypto",
   "description": "implementation of crypto for React Native",
   "version": "2.2.0",
-  "homepage": "https://github.com/mvayngrib/react-native-crypto",
+  "homepage": "https://github.com/tradle/react-native-crypto",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mvayngrib/react-native-crypto.git"
+    "url": "git://github.com/tradle/react-native-crypto.git"
   },
   "scripts": {
     "standard": "standard",
