@@ -32,6 +32,10 @@ A suggested workflow:
   // ...the rest of your code
   ```
 
+## example
+
+see https://github.com/mvayngrib/rncryptoexample
+
 ## the crypto in this box
 
 What follows is unedited text from crypto-browserify
