@@ -4,6 +4,12 @@ Note: this module is a clone of [crypto-browserify](https://github.com/crypto-br
 
 A port of node's `crypto` module to React Native.
 
+## DEPRECATED
+
+you should probably use a combination of:
+- react-native-get-random-values to shim getRandomValues
+- crypto-browserify
+
 ## install
 
 Because this module depends on some node core modules, and react-native doesn't currently have a [resolve.alias a la webpack](https://productpains.com/post/react-native/packager-support-resolvealias-ala-webpack), you will need to use [rn-nodeify](https://github.com/tradle/rn-nodeify) for your shimming needs.
