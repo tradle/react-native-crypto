@@ -90,6 +90,10 @@ var rf = require('randomfill')
 exports.randomFill = rf.randomFill
 exports.randomFillSync = rf.randomFillSync
 
+exports.constants = {
+  RSA_PKCS1_PADDING: 1
+}
+
 // the least I can do is make error messages for the rest of the node.js/crypto api.
 ;[
   'createCredentials'
