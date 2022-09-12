@@ -102,3 +102,5 @@ exports.randomFillSync = rf.randomFillSync
     ].join('\n'))
   }
 })
+
+exports.getCurves = () => [];
